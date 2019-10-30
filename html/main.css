@@ -112,6 +112,11 @@ Login Page
 /* ----------------------------------------
 Results
 ------------------------------------------- */
+.resultPage {
+	background-image: none;
+}
+
+
 .results {
 	text-align: left;
 	padding: 10px 0px 10px 25px;
@@ -123,6 +128,11 @@ Results
 /* ----------------------------------------
 History
 ------------------------------------------- */
+.historyPage {
+	background-image: none;
+}
+
+
 .history {
 	text-align: left;
 	padding: 10px 0px 10px 25px;
