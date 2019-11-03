@@ -122,8 +122,24 @@ Results
 	padding: 10px 0px 10px 25px;
 }
 
+.listing {
+	margin: 10px;
+}
+
+.medicineBox {
+	display: flex;
+	border: solid 2px black;
+}
+
+.medicineInfo {
+	margin: 10px;
+	padding: 0px 0px 0px 25px;
+}
 
 
+.foodListing1 {
+	display: flex;
+}
 
 /* ----------------------------------------
 History
