@@ -80,3 +80,76 @@ Search
 input {
 	font-size: 20px;
 }
+
+
+/* ----------------------------------------
+Login Page
+------------------------------------------- */
+.loginPage { 
+  height: 500px;
+  position: relative;
+}
+
+.loginBox {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.unameBox, .pswBox {
+	margin: 10px;
+}
+
+.options button,label,input,span {
+	margin: 5px;
+}
+
+
+
+/* ----------------------------------------
+Results
+------------------------------------------- */
+.resultPage {
+	background-image: none;
+}
+
+
+.results {
+	text-align: left;
+	padding: 10px 0px 10px 25px;
+}
+
+.listing {
+	margin: 10px;
+}
+
+.medicineBox {
+	display: flex;
+	border: solid 2px black;
+}
+
+.medicineInfo {
+	margin: 10px;
+	padding: 0px 0px 0px 25px;
+}
+
+
+.foodListing1 {
+	display: flex;
+}
+
+/* ----------------------------------------
+History
+------------------------------------------- */
+.historyPage {
+	background-image: none;
+}
+
+
+.history {
+	text-align: left;
+	padding: 10px 0px 10px 25px;
+}
