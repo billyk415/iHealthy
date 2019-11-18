@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 	<title> iHealthy </title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +27,7 @@ session_start();
 	    	}
 	    	else
 	    	{
-	    		echo '<a href="/history.php" class="button"><button type="submit">Search History</button></a>'; 
+	    		echo '<a href="/history/list.php" class="button"><button type="submit">Search History</button></a>'; 
 	    	}
 	    	
 
@@ -39,7 +40,7 @@ session_start();
 
 <div class="topnav">
   <input class="search-field" type="text" placeholder="Search">
-  <button type="submit" class=""><img class="icon" src=img/icon.png></button>
+  <a href="result.php"><button type="submit" class=""><img class="icon" src=img/icon.png></button></a>
 </div>
 
 <form class="upload" action="upload_file.php" method="post" enctype="multipart/form-data">

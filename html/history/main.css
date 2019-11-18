@@ -13,17 +13,13 @@ body {
 	text-align: center;
 	margin: 0;
 	background-image: url("background.jpg"); 
-	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
   	background-size: cover;
-  	font-size: 14px;
 }
 
 button {
 	border: 1px solid black;
 	background-color: white;
-	padding: 10px;
 }
 
 
@@ -32,11 +28,25 @@ button {
 /* ----------------------------------------
 Layout
 ------------------------------------------- */
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+.col-25 {
+	width: 25%;
 }
 
+.col-33 {
+	width: 33%;
+}
+
+.col-50 {
+	width: 50%;
+}
+
+.col-66 {
+	width: 66%;
+}
+
+.col-75 {
+	width: 75%;
+}
 
 /* ----------------------------------------
 icon
@@ -50,7 +60,7 @@ icon
 NAV
 ------------------------------------------- */
 nav {
-	text-align: center;
+	text-align: right;
 }
 
 
@@ -65,17 +75,35 @@ h1 {
 /* ----------------------------------------
 Search
 ------------------------------------------- */
-.topnav {
-	display: block;
-}
 input {
 	font-size: 20px;
+}
+
+
+/* ----------------------------------------
+Login Page
+------------------------------------------- */
+/*.loginPage { 
+  height: 500px;
+  position: relative;
+}
+
+.loginBox {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.unameBox, .pswBox {
 	margin: 10px;
 }
 
-.upload {
-	text-align: center;
-}
+.options button,label,input,span {
+	margin: 5px;
+}*/
 
 
 
@@ -111,56 +139,15 @@ Results
 	display: flex;
 }
 
-.medicinePic img {
-	max-width: 400px;
-}
-
 /* ----------------------------------------
 History
 ------------------------------------------- */
-
-
-
-@media only screen and (min-width: 768px) {
-  .col-10 {
-  	width: 10%;
-  }
-
-  .col-25 {
-  	width: 25%;
-  }
-
-  .col-33 {
-  	width: 33%;
-  }
-
-  .col-50 {
-  	width: 50%;
-  }
-
-  .col-66 {
-  	width: 66%;
-  }
-
-  .col-75 {
-  	width: 75%;
-  }
-
-  .col-100 {
-  	width: 100%;
-  }
-
-  body {
-  	font-size: 18px;
-  }
-
-  nav {
-  	text-align: right;
-  }
-
-  .topnav {
-  	display: inline;
-  }
+.historyPage {
+	background-image: none;
 }
 
-	
+
+.history {
+	text-align: left;
+	padding: 10px 0px 10px 25px;
+}

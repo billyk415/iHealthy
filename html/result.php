@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +17,35 @@
 <body class="resultPage">
 
 	<div class="topnav">
-  		<input id="search-field" type="text" placeholder="Search">
-  		<button type="submit"><img class="icon" src=img/icon.png></button>
+		<form method="post">
+  		<input id="search-field" type="text" placeholder="Search" name="search">
+  		<!--<input type="submit" name="submit">-->
+  		<button type="submit" name= "submit"><img class="icon" src=img/icon.png></button></a>
+  		</form>
 	</div>
 
+	<?php
+
+$con = new PDO("mysql:host=ihealthy.16mb.com; dbname=u207738006_ihealthy",'u207738006_root', '123456');
+
+if(isset($_POST["submit"])){
+	$str = $_POST["search"];
+	$sth = $con->prepare("SELECT * FROM `medicine` WHERE medicine_name = '$str'");
+
+	$sth->setFetchMode(PDO:: FETCH_OBJ);
+	$sth -> execute();
+
+	if($row =  $sth->fetch()){
+		?>
+		<!--<br><br><br>
+		<table>
+			<tr>
+				<th>name</th>
+				<th>image</th>
+				<th>component</th>
+				<th>sideeffect</th>
+				<th>food</th>
+			</tr>-->
 	<div class="results">
 		<h2>Result Listings</h2>
 
@@ -25,11 +54,12 @@
 	<div class="listing">
 		<div class="medicineBox">
 			<div class="medicinePic">
-				<img src="img/icon.png">
+				<img src="<?php echo $row->medicine_image; ?>"/>
 			</div>
 			<section class="medicineInfo">
-				<h3>Medicine Name</h3>
-				<p>info about dafafdf</p>
+				<td><?php echo $row->medicine_name; ?></td>
+				<td><?php echo $row->medicine_component;?></td>
+				<td><?php echo $row->medicine_sideeffect;?></td>
 			</section>
 		</div>
 
@@ -39,21 +69,39 @@
 					<img src="img/icon.png">
 				</div>
 				<section class="foodInfo">
-					<h3>Food Name 1</h3>
-					<p>info about food 1</p>
+					<td><?php echo $row->food;?></td>
+					<p>info about <?php echo $row->food;?></p>
 				</section>
 			</div>
-			<div class="foodListing1">
+			<!-- <div class="foodListing1">
 				<div class="foodPic1">
 					<img src="img/icon.png">
 				</div>
 				<section class="foodInfo">
 					<h3>Food Name 1</h3>
 					<p>info about food 1</p>
-				</section>
+				</section> -->
 			</div>
 		</div>
 	</div>
 
+				
+				
+				
+			<!--</tr>
+		</table>-->
+	<?php
+	}
+	else{
+		echo "medicine does not exist";
+	}
+}
+?>
+
+
+
+
+	
 
 </body>
+</html>
